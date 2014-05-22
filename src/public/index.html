@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo of EasyEditor</title>
+    <link href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+
+<h2>Hello, welcome use online image editor:</h2>
+<div>Please select a image:</div>
+<input type="file" name="" id="file"/>
+<form id="form" action="/upload" enctype="multipart/form-data">
+    <input type="text" name="image" id="image"/>
+    <input type="button" value="submit" id="submit"/>
+</form>
+<img src="" id="img_show" />
+<canvas id="canvas" width="300px" height="300px"></canvas>
+
+<script src="lib/lib-3rd/jquery-1.10.2.min.js"></script>
+<script src="lib/lib-3rd/jquery.form.js"></script>
+<script src="lib/index.js"></script>
+</body>
+</html>
