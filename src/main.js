@@ -20,11 +20,11 @@ app.get('*',function(req,res){
 app.post('/upload', function(req, res){
     var form = new multiparty.Form();
     form.parse(req, function(err, fields, files) {
-        console.log(fields,files);
+//        console.log(fields,files);
 
         var imgData = fields.image[0];
         var dataBuffer = new Buffer(imgData, 'base64');
-        fs.writeFile("../../../out.png", dataBuffer, function(err) {
+        fs.writeFile("../../../out.jpg", dataBuffer, function(err) {
             if(err){
                 res.send(err);
             }else{
