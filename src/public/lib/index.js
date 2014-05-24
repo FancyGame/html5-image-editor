@@ -124,6 +124,11 @@ $('#canvas').mouseup(function(e){
     canvas.data('left',canvas.data('left')+left);
     canvas.data('top',canvas.data('top')+top);
 });
+$('#canvas').bind('mousewheel',function(e,delta){
+    e.preventDefault();
+    var ratio = (e.originalEvent.wheelDelta/120)*0.01;
+    showImg(image,parseFloat($('#ratio').val())+ratio);
+});
 
 $("#submit").click(function(){
     var success = function(data) {
